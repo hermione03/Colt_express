@@ -1,0 +1,58 @@
+colt-ze3ma program
+Is a multiplayer turn based strategy game. Each players choose actions that will be execute in order during a turn 
+
+main external modules used:
+    tkinter, for the graphic
+    PIL (pillow fork), for the images management
+    pygame, for the audio managment
+
+
+
+colt-ze3ma.py : main program's file
+    contain the main class Game, that manages the game (obviously -_-'')
+
+    Manages sounds, player creation, player actions choice, action execution, Marshall movement.
+
+
+MODULES
+
+audios.py
+    audio files loading and playing
+
+    setGlobalVolume(volume:int)
+        set the music and sounds volume to the same percentage (pretty useless in his current form, i'll maybe try to add a feature to set the global volume ingame)
+
+    setVolume(type:Literal['music', 'sounds'], value:int)
+        set the music or sounds to the given percentage
+    
+    resetSoundsVolume()
+        set each sounds volume to a predeterminate value (because some sound may be louder then other, so, no need to modify the audio files themselves)
+    
+    playMusic(name:Literal['main', 'maria'])
+        plays named music
+    
+    fadeOutMusic(time_ms:int)
+        fade out the music by the ms amount
+
+    reduceMusicVolume(volume)
+        reduce the current music's volume of the music by a defined amount (30% of volume)
+
+    resetMusicVolume(volume)
+        unreduce the music's volume
+
+    playRandomSound()
+        play a random sound from the sounds' list (exept 'loading', horses galoping)
+
+    playSound(name:Literal['shoot', 'marshallShoot', 'shootEmpty', 'confirm', 'cancel', 'newGame', 'loadGame', 'startGame', 'returnMainMenu', 'loading', 'rules', 'butin', 'magot', 'stepSide'])
+        play the named sound (some sounds have multiples sounds, so a random form them will be played)
+
+
+
+bandit.py
+    contain a class the define a player
+
+    Bandit(game:Game, name:str, color:str, position:tuple=None, actions:list=None, bullets:int=None)
+        predifine args are used to create player when loading a saved game
+
+
+...flemme de continuer

@@ -1,0 +1,87 @@
+Colt Express:
+
+Presentation:
+
+Le projet est une implémentation en python du jeu Colt Express (simplfifié) en utilisant Tkinter afin d'en réaliser l'interface.
+
+-La problématique est donc de réussir à manier l'outil tout en gérant la partie code afin d'avoir une version jouable et "user-friendly" du jeu en respectant les règles et en suivant la consigne donnée.
+
+
+
+-Le Projet a été divisé en modules pour faciliter sa lecture , révision et 
+compréhension, il comprends donc : (c'est faux)
+
+
+Ce projet peut être encore bien amelioré et optimisé (non, c'est déjà une masterclass en fait, mais chut), nous n'avons également 
+pas eu le temps de finir la création d'une musique de fond, mais il reste jouable (évidemment, je rappelle que c'est une masterclass en fait).
+
+ 
+	
+
+● Parties du sujet traitées:
+
+Niveau Programmation python:
+
+
+	Creation d'un nombre donné de Wagons
+	
+	Planification et déroulement des Actions; Gestion des déplacements des bandits (avant, arrière, allez à l'intérieur, grimper sur le toit), le braquage et récuperation des butins (avec gestion de butins qui ont été perdus , et qui donc n'ont plus besoins de l'action 'braquer' pour être recuperés), Tir(selon un nombre de balles determiné) et en faisant attention a la présence du marshall (donc si il est dans le meme wagon, le bandit perd un de ses butins et monte sur le toit)
+	
+	Déplacements aléatoires d'un marshall en partant de la locomotive:
+		D'abord considérer le Marshall comme booléne, présent ou non dans un wagon, puis le set a True (aprés l'avoir mis a False sur le précedents) de façon à se qu'il 'avance' ou 'recule' d'un wagon de façon aléatoire, en utilisant le random.randint de python (entre 0 et 1, pour basculer entre les conditions) tout en faisant attention aux limites du train.
+
+	Implémentation d'un compte rendu en temps reel (log) des actions effectuées.
+	Ajout de Butins des 3 sortes : Bourse{100,200}, Bijoux{500}, magot{1000}
+
+
+Niveau Programmation Interface:
+	Ajout des boutons des Actions, et celui qui les lancent (bouton Action)
+	Mise à jour de l'affichage de chaque déplacement du bandit/Marshall  (on les voit bouger).
+
+
+
+Respect des consignes de planification des actions
+
+Gestion du multijoueurs (avec les consignes)
+
+
+●Bonus:
+	- Gestion de sauvegarde de partie (imcomplet, il faut ajouter de nouvelles variables)
+	- Menu principal donnant la possibilité de jouer une nouvelle partie ,en reprendre un ancienne , voir les credits ou quitter .
+	-Choix des parametre de jeux au menu demarrer(Nb_joueurs , nb_balles.....)
+	- Gestion differentes des Actions (echanger ou supprimer)
+	-CHoix de couleurs de bandits et leurs creation en utilisant un system de layers
+	 
+ 
+
+
+
+ 
+● Les problèmes rencontrés et eliminés:
+	-Transparance des canvas  x)
+	-Deplacements visuel fluide et action par action 
+	-Gestion de la creation des bandits ( 1er tour ; avec couleurs , nom et acions)
+	- Implementation d'un espace de creation et de gestion d'actions des bandits
+
+
+
+	
+
+●Les difficultées rencontrées au niveaux graphique (interface) qui n'ont pas 
+etes totalement eliminés  concernaient principalement la gestion 
+du redimentionnement de la fenetre et de ses widgets .
+
+
+
+Ajouts/modifications souhaités:
+	audio
+	réécriture de la fonction de resize (flemme)
+	diviser le prog en modules (parceque 1700 lignes, mdr)
+	Ajout de butons ( un oublie a vrai dire ...)
+
+
+Auteurs: 
+
+Valentin Guillon - Maria Messaoud-nacer
+
+
